@@ -18,7 +18,7 @@ jobs:
       - name: Descargar el código fuente
         uses: actions/checkout@v2
         
-      - name: Descarga de Visual Basic 6
+      - name: Descargar Visual Basic 6
         uses: engineerd/configurator@v0.0.5
         with:
           name: "vb6.exe"
@@ -31,7 +31,6 @@ jobs:
           cmd.exe /C " vb6.exe /make /outdir "D:\a\ao-server\ao-server" /d UsarQueSocket=1:ConUpTime=1:AntiExternos=0:Lac=1:DEBUGGING=1 /out "D:\a\ao-server\ao-server\build.log" "D:\a\ao-server\ao-server\Server.VBP" " && exit %%ERRORLEVEL%%
         
         shell: cmd
-        working-directory: ./project
         
       - run: dir
           
