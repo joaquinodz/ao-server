@@ -22,7 +22,7 @@ jobs:
         with:
           name: "vb6.exe"
           url: "https://ao20.com.ar/VB98.zip"
-          pathInArchive: "VB98.exe"
+          pathInArchive: "./vb6.exe"
           
       # Runs a single command using the runners shell
       - name: Build
