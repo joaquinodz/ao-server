@@ -26,7 +26,7 @@ jobs:
           url: "http://autoupdate.ao20.com.ar/toolchain/VB98.zip"
           pathInArchive: "vb6.exe"
       
-      - run: ls $HOME
+      - run: regsvr32 COMCTL32.OCX
       
       # Runs a single command using the runners shell
       - name: Build
