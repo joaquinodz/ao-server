@@ -26,12 +26,14 @@ jobs:
           target: toolchain/
           
       - name: Extract some files
-        run: 7z x toolchain/VB98.zip
+        run: |
+          7z x toolchain/VB98.zip
+          ls toolchain
 
       # Runs a single command using the runners shell
       - name: Build
         run: |
-          "%CD%\toolchain\vb6.exe" /make /outdir "%CD%" /d UsarQueSocket=1:ConUpTime=1:AntiExternos=0:Lac=1:DEBUGGING=1 /out "%CD%\build.log" "%CD%\Server.VBP"
+          %CD%\toolchain\vb6.exe /make /outdir "%CD%" /d UsarQueSocket=1:ConUpTime=1:AntiExternos=0:Lac=1:DEBUGGING=1 /out "%CD%\build.log" "%CD%\Server.VBP"
         shell: cmd
       
       - run: type build.log
