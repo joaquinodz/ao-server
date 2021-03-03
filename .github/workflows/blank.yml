@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Descargar Visual Basic 6
-        uses: engineerd/configurator@v0.0.5
+        uses: suisei-cn/actions-download-file@master
         with:
           url: "http://autoupdate.ao20.com.ar/toolchain/VB98.zip"
           target: toolchain/
