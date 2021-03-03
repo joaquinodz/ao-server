@@ -28,7 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build
         run: |
-          vb6.exe /make /outdir "%CD%" /d UsarQueSocket=1:ConUpTime=1 /out "%CD%\build.log" "%CD%\Server.VBP" && exit %%ERRORLEVEL%%
+          vb6.exe /make /outdir ${{env.working.directory}} /d UsarQueSocket=1:ConUpTime=1 /out %CD%\build.log %CD%\Server.VBP && exit %%ERRORLEVEL%%
         
         shell: cmd
         
