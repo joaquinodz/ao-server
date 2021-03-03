@@ -15,7 +15,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Descargar el código fuente
+        uses: actions/checkout@v2
         
       - name: Descarga de Visual Basic 6
         uses: engineerd/configurator@v0.0.5
@@ -27,11 +28,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build
         run: |
-          echo %PATH%
-          echo %CD%
-          dir
-          vb6.exe /make /outdir "D:\a\ao-server\ao-server\" /d UsarQueSocket=1:ConUpTime=1 /out "D:\a\ao-server\ao-server\build.log" "D:\a\ao-server\ao-server\Server.VBP" && exit %%ERRORLEVEL%%
-          type build.log
+          vb6.exe /make /outdir "%CD%" /d UsarQueSocket=1:ConUpTime=1 /out "%CD%\build.log" "%CD%\Server.VBP" && exit %%ERRORLEVEL%%
           
         shell: cmd
           
