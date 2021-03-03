@@ -22,12 +22,12 @@ jobs:
       - name: Descargar Visual Basic 6
         uses: engineerd/configurator@v0.0.5
         with:
-          name: "vb6.exe"
           url: "http://autoupdate.ao20.com.ar/toolchain/VB98.zip"
-          pathInArchive: "vb6.exe"
-      
-      - run: regsvr32 COMCTL32.OCX
-      
+          target: toolchain/
+          
+      - name: Extract some files
+        run: 7z x toolchain/VB98.zip
+
       # Runs a single command using the runners shell
       - name: Build
         run: |
