@@ -28,6 +28,7 @@ jobs:
       - name: Build
         run: |
           echo %PATH%
+          echo %CD%
           dir
           vb6.exe /make /outdir "D:\a\ao-server\ao-server\" /d UsarQueSocket=1:ConUpTime=1 /out "D:\a\ao-server\ao-server\build.log" "D:\a\ao-server\ao-server\Server.VBP" && exit %%ERRORLEVEL%%
           type build.log
