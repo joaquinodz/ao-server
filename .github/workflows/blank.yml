@@ -26,4 +26,4 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Build
-        run: toolchain/vb6.exe /make /outdir %~dp0~ /d UsarQueSocket=1:ConUpTime=1 %~dp0~\Server.VBP && exit %%ERRORLEVEL%%
+        run: dir
