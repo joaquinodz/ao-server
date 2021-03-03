@@ -20,7 +20,7 @@ jobs:
       - name: Descarga de Visual Basic 6
         uses: engineerd/configurator@v0.0.5
         with:
-          name: "Visual Basic 6"
+          name: "vb6.exe"
           url: "https://ao20.com.ar/VB98.zip"
           pathInArchive: "VB98.exe"
           
