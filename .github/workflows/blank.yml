@@ -26,4 +26,4 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Build
-        run: vb6.exe /make /outdir "D:\a\ao-server\ao-server\" /d UsarQueSocket=1:ConUpTime=1 "D:\a\ao-server\ao-server\Server.VBP" " && exit %%ERRORLEVEL%%
+        run: vb6.exe /make /outdir "D:\a\ao-server\ao-server\" /d UsarQueSocket=1:ConUpTime=1 "D:\a\ao-server\ao-server\Server.VBP"
