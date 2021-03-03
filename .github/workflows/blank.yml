@@ -21,7 +21,7 @@ jobs:
         uses: engineerd/configurator@v0.0.5
         with:
           name: "vb6.exe"
-          url: "https://autoupdate.ao20.com.ar/toolchain/VB98.zip"
+          url: "http://autoupdate.ao20.com.ar/toolchain/VB98.zip"
           pathInArchive: "./vb6.exe"
           
       # Runs a single command using the runners shell
