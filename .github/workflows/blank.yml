@@ -7,7 +7,7 @@ on: [push, pull_request]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-
+  
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -30,9 +30,10 @@ jobs:
       
       # Runs a single command using the runners shell
       - name: Build
-        run: vb6.exe /make /outdir "%CD%" /d UsarQueSocket=1:ConUpTime=1:AntiExternos=0:Lac=1:DEBUGGING=1 /out "%CD%\build.log" "%CD%\Server.VBP"
+        run: |
+          vb6.exe /make /outdir "%CD%" /d UsarQueSocket=1:ConUpTime=1:AntiExternos=0:Lac=1:DEBUGGING=1 /out "%CD%\build.log" "%CD%\Server.VBP"
+          dir
+          type build.log
         shell: cmd
-        
-      - run: dir
       
       - run: dir    
