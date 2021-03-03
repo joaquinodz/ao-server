@@ -23,7 +23,7 @@ jobs:
         with:
           name: "vb6.exe"
           url: "http://autoupdate.ao20.com.ar/toolchain/VB98.zip"
-          pathInArchive: "./vb6.exe"
+          pathInArchive: "vb6.exe"
       
       - run: dir
       
@@ -34,4 +34,4 @@ jobs:
         
         shell: cmd
       
-          
+      - run: dir    
