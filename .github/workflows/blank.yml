@@ -30,12 +30,10 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build
-        run: toolchain/vb6.exe /make /outdir "%CD%" /d UsarQueSocket=1:ConUpTime=1:AntiExternos=0:Lac=1:DEBUGGING=1 /out "%CD%\build.log" "%CD%\Server.VBP"
+        run: toolchain/vb6.exe /make /outdir "$GITHUB_WORKSPACE" /d UsarQueSocket=1:ConUpTime=1:AntiExternos=0:Lac=1:DEBUGGING=1 /out "$GITHUB_WORKSPACE\build.log" "$GITHUB_WORKSPACE\Server.VBP"
         shell: cmd
       
       - run: type build.log
         shell: cmd
-        
-        
       
       - run: dir    
