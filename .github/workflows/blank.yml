@@ -26,8 +26,10 @@ jobs:
           
       # Runs a single command using the runners shell
       - name: Build
-        run: vb6.exe /make /outdir %CD% /d UsarQueSocket=1:ConUpTime=1 /out "D:\a\ao-server\ao-server\build.log" "D:\a\ao-server\ao-server\Server.VBP"
-        
-      - run: type build.log
+        run: | 
+          vb6.exe /make /outdir %CD% /d UsarQueSocket=1:ConUpTime=1 /out "D:\a\ao-server\ao-server\build.log" "D:\a\ao-server\ao-server\Server.VBP"
+          type build.log
+          
+        shell: cmd
           
           
